@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Sudoku</title>
+</head>
+<body>
+
+ <div class="grid-container">
+    {% for row in board_init %}
+            {% for s in row %}
+            <div class="row_{{ s + 1 }}">
+                {{ s }}
+                            </div>
+                {% endfor %}
+
+    {% endfor %}
+    </div>
+</body>
+</html>
